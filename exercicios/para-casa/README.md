@@ -55,8 +55,8 @@ Além disso, será necessário criar alguns métodos:
 - [x] Todos os tipos de animais precisam de um método `vacinar()`, que receba uma nova vacina e adicione no histórico do bichinho.
 - [x] Todos os animais precisam de um método `consultar()`, que adicione uma nova consulta ao histórico. As consultas devem ser mantidas em ordem cronológica reversa, sendo a primeira da lista sempre a mais recente.
 - [x] Todos os animais precisam de um método `realizarProcedimento()`, que inclui o procedimento (tipo e motivo) no histórico médico. 
-- [ ] `Gatos` precisam do método `miar()` e cachorros precisam do método `latir()`;
-- [ ] `AnimalExotico` precisam de um método `ehAdulto` que retorne `true` caso o animal já seja um adulto para a espécie dele e false caso contrário. Sua implementação pode cobrir apenas as seguintes espécies:
+- [x] `Gatos` precisam do método `miar()` e cachorros precisam do método `latir()`;
+- [x] `AnimalExotico` precisam de um método `ehAdulto` que retorne `true` caso o animal já seja um adulto para a espécie dele e false caso contrário. Sua implementação pode cobrir apenas as seguintes espécies:
   - Hamster: adulto aos 2 meses
   - Papagaio: adulto aos 3 anos
   - Calopsita: adulto aos 18 meses

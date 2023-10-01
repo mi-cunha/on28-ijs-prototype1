@@ -20,21 +20,7 @@ function AnimalExotico(nome, idade, cor, especie) {
 	this.idade = idade;
 	this.cor = cor;
 	this.especie = especie;
-	if ((especie = hamster && idade > 2)) {
-		this.adulto = true;
-	} else {
-		this.adulto = false;
-	}
-	if ((especie = papagaio && idade > 36)) {
-		this.adulto = true;
-	} else {
-		this.adulto = false;
-	}
-	if ((especie = hamster && idade > 18)) {
-		this.adulto = true;
-	} else {
-		this.adulto = false;
-	}
+	this.adulto = this.ehAdulto();
 	this.historico = new HistoricoMedico();
 }
 
@@ -64,7 +50,27 @@ HistoricoMedico.prototype.realizarProcedimento = function realizarProcedimento(
 	);
 };
 
-cachorro1 = new Cachorro("Doguinho", 24, "preto", true, "poodle");
+AnimalExotico.prototype.ehAdulto = function () {
+	if (
+		(this.especie === "hamster" && this.idade > 2) ||
+		(especie === "papagaio" && idade > 36) ||
+		(especie === "hamster" && idade > 18)
+	) {
+		return true;
+	} else {
+		return false;
+	}
+};
+
+Gato.prototype.miar = function miar() {
+	console.log(`${this.nome} está miando.`);
+};
+
+Cachorro.prototype.latir = function latir() {
+	console.log(`${this.nome} está latindo.`);
+};
+
+cachorro1 = new Cachorro("Aslam", 42, "preto", false, "srd");
 cachorro1.historico.consultar("09/08/2023");
 console.log(cachorro1);
 cachorro1.historico.consultar("11/09/2023");
@@ -75,3 +81,12 @@ cachorro1.historico.vacinar("v10");
 console.log(cachorro1);
 cachorro1.historico.realizarProcedimento("ultrassom", "dores");
 console.log(cachorro1.historico);
+
+hamster1 = new AnimalExotico("Iogurte", 19, "branco e laranja", "hamster");
+console.log(hamster1);
+
+gato1 = new Gato("Pipoca", 18, "branco", true);
+console.log(gato1);
+
+cachorro1.latir();
+gato1.miar();
